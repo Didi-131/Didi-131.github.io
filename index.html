@@ -1,140 +1,155 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>尋找幸福：天才公關貓求包養</title>
+    <title>個人簡介 | 數據分析與 BI 開發專家</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
             line-height: 1.6;
-            color: #444;
-            background-color: #fdf6f0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
             margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-        h1 {
-            color: #d35400;
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            margin-bottom: 30px;
-        }
-        .cat-profile {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: center;
-        }
-        .cat-image {
-            flex: 1;
-            min-width: 300px;
-            background: #eee;
-            height: 300px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
-            color: #999;
-            border: 2px dashed #ddd;
-        }
-        .cat-info {
-            flex: 1;
-            min-width: 300px;
-        }
-        .skills {
-            background: #fff5e6;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid #f39c12;
-            margin-top: 20px;
-        }
-        .skills h3 {
-            margin-top: 0;
-            color: #e67e22;
-        }
-        .skill-list {
-            list-style: none;
             padding: 0;
         }
-        .skill-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
-        .skill-list li::before {
-            content: "🐾";
-            margin-right: 10px;
-        }
-        .cta-button {
-            display: block;
-            width: 200px;
-            margin: 40px auto 0;
-            padding: 15px;
-            background-color: #e67e22;
-            color: white;
+
+        header {
             text-align: center;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: transform 0.2s;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .tagline {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1-fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: #eef2f3;
+            padding: 15px;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-item strong {
+            display: block;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: opacity 0.3s;
+        }
+
         .cta-button:hover {
-            background-color: #d35400;
-            transform: scale(1.05);
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>👋 嗨！我是你的夢幻喵夥伴</h1>
-    <p class="subtitle">我不只是一隻貓，我是你未來的超能家人</p>
+    <div class="container">
+        <header>
+            <h1>關於我</h1>
+            <p class="tagline">數據分析工程師 | BI 解決方案專家</p>
+        </header>
 
-    <div class="cat-profile">
-        <div class="cat-image">
-            [此處放入貓咪萌照]
-        </div>
+        <section>
+            <h2>職涯目標</h2>
+            <p>
+                我致力於將複雜的原始資料轉化為具備商業價值的直觀決策建議。憑藉深厚的 <strong>SQL Server</strong> 底層開發經驗與 <strong>Power BI</strong> 的視覺化能力，我能為企業建構穩定、高效且易於理解的數據分析平台。目前正在尋求數據分析工程師或 BI 開發者相關職位，期望能發揮我在數據建模與多維度分析上的專業。
+            </p>
+        </section>
 
-        <div class="cat-info">
-            <h2>基本資料</h2>
-            <ul>
-                <li><strong>個性：</strong> 極度親人、溫暖治癒、聰明過人</li>
-                <li><strong>專長：</strong> 社交大師、家務監督員</li>
-                <li><strong>健康：</strong> 已施打疫苗、身體健康、活力滿分</li>
-            </ul>
+        <section>
+            <h2>核心專業技能</h2>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <strong>SQL Server 資料庫管理</strong>
+                    精通 T-SQL 編寫、資料庫結構優化及異質資料來源的分析與比較，確保數據底層架構的穩定與效能。
+                </div>
+                <div class="skill-item">
+                    <strong>Power BI 視覺化報表</strong>
+                    擅長設計高互動性的儀表板，針對不同部門需求提供量身打造的視覺化呈現，提升溝通效率。
+                </div>
+                <div class="skill-item">
+                    <strong>高階 DAX 查詢分析</strong>
+                    熟練運用 DAX 進行複雜度較高的邏輯運算與指標定義（如 YoY、滾動平均等），深入挖掘數據背後的洞察。
+                </div>
+                <div class="skill-item">
+                    <strong>多維度 Cube 製作</strong>
+                    具備構建 SSAS Cube 的實戰經驗，能有效處理大規模數據集，並透過多維度模型加速決策分析流程。
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h2>求職期待</h2>
+            <p>尋求能應用商業智慧技術、優化企業數據工作流的環境。我具備獨立解決問題的能力，並對新技術保持高度好奇心。</p>
+            <a href="mailto:your-email@example.com" class="cta-button">與我聯繫</a>
+        </section>
+
+        <div class="footer">
+            <p>© 2026 個人簡介 - 數據力即是競爭力</p>
         </div>
     </div>
-
-    <div class="skills">
-        <h3>🌟 驚人特技 (我可能是貓界愛因斯坦)</h3>
-        <ul class="skill-list">
-            <li><strong>空中飛貓：</strong> 我會精準跳過呼拉圈，身手靈活矯健！</li>
-            <li><strong>紳士禮儀：</strong> 伸出小肉球跟你「握手」，打招呼最專業。</li>
-            <li><strong>自動導航：</strong> 看到你就會主動靠近，給你最溫暖的「貼貼抱抱」。</li>
-            <li><strong>溫柔百分百：</strong> 絕對親人且「不伸爪」，是你最安全的親密伴侶。</li>
-        </ul>
-    </div>
-
-    <blockquote style="margin-top: 30px; border-left: 4px solid #ddd; padding-left: 15px; color: #666;">
-        「我一直在等待一個能讓我展現所有才華、並用一生守護的對象。如果你正在尋找一個會握手、會表演，還會每天給你抱抱的家人，那我就在這裡！」
-    </blockquote>
-
-    <a href="mailto:your-email@example.com" class="cta-button">帶我回家</a>
-</div>
 
 </body>
 </html>
