@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | 數據分析與 BI 開發專家</title>
+    <title>Resume | 露曦 - 數據分析與 BI 開發專家</title>
     <style>
         :root {
             --sidebar-bg: #2c3e50;
@@ -28,10 +28,9 @@
             background: var(--main-bg);
             display: flex;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            min-height: 1100px; /* 接近 A4 比例 */
+            min-height: 1100px;
         }
 
-        /* 左側邊欄 */
         .sidebar {
             width: 320px;
             background-color: var(--sidebar-bg);
@@ -83,7 +82,6 @@
             font-size: 12px;
         }
 
-        /* 右側主內容 */
         .main-content {
             flex: 1;
             padding: 50px 40px;
@@ -134,6 +132,15 @@
             margin-bottom: 5px;
         }
 
+        .project-badge {
+            display: inline-block;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
         .footer-print {
             margin-top: auto;
             font-size: 12px;
@@ -162,25 +169,25 @@
                 <p>📍 台灣，台中市 </p>
                 <p>📧 cclucy131@example.com</p>
                 <p>📞 0900-000-000</p>
-                <p>🔗 LinkedIn / GitHub / Portfolio</p>
+                <p>🔗 Portfolio / GitHub</p>
             </div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">技術棧</div>
+            <div class="sidebar-title">核心技術</div>
             <div class="skill-tags">
                 <span class="tag">SQL Server (T-SQL)</span>
-                <span class="tag">Power BI</span>
-                <span class="tag">DAX</span>
+                <span class="tag">Power BI 視覺化</span>
+                <span class="tag">DAX 運算邏輯</span>
                 <span class="tag">SSAS / Cube</span>
-                <span class="tag">ETL (SSIS)</span>
+                <span class="tag">ETL 流程開發</span>
                 <span class="tag">Data Modeling</span>
                 <span class="tag">Excel VBA</span>
             </div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">語言</div>
+            <div class="sidebar-title">語言能力</div>
             <div class="contact-info">
                 <p>中文 - 母語</p>
                 <p>英文 - 普通 (TOEIC 550)</p>
@@ -190,56 +197,58 @@
 
     <main class="main-content">
         <section>
-            <h2>職涯總結</h2>
+            <h2>轉職目標與自學實績</h2>
             <p class="objective-text">
-                擁有深厚的 <strong>SQL Server</strong> 底層開發經驗與 <strong>Power BI</strong> 視覺化實績。專長在於建構穩定、高效且易於理解的數據分析平台，曾成功優化異質資料來源的分析流程，並透過 SSAS 多維度模型加速企業決策速度。致力於將數據指標轉化為可執行的商業洞察（Actionable Insights）。
+                具備紮實的 <strong>SQL Server</strong> 與 <strong>Power BI</strong> 開發能力，專注於從數據底層建模到終端報表呈現的完整流程。
+                <br>
+                曾於生管實務中觀察到數據自動化的需求，後續投入 BI 技術深造，目前已能熟練運用 <strong>T-SQL</strong> 處理複雜數據清洗，並透過 <strong>SSAS Cube</strong> 建立高效能的多維度分析模型。我是一位具備商業邏輯且能獨立解決技術難題的跨領域學習者。
             </p>
         </section>
 
         <section>
-            <h2>核心專業與成就</h2>
+            <h2>數據開發個人專案</h2>
             <div class="experience-item">
                 <div class="exp-header">
-                    <span class="exp-role">SQL Server 資料庫開發與優化</span>
+                    <span class="exp-role">商業智慧 (BI) 整合分析專案</span>
                 </div>
                 <ul class="exp-detail">
-                    <li>精通 T-SQL 編寫與資料庫結構優化，顯著提升查詢效能達 [X]% 以上。</li>
-                    <li>處理異質資料來源整合，確保數據底層架構在自動化更新過程中的穩定性。</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">Power BI 與高階 DAX 分析</span>
-                </div>
-                <ul class="exp-detail">
-                    <li>設計高互動性儀表板，支援 YoY、滾動平均及各項營運核心指標（KPI）監測。</li>
-                    <li>運用 DAX 進行複雜商業邏輯運算，將各部門需求落實為可視化指標。</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">SSAS 多維度模型 (Cube)</span>
-                </div>
-                <ul class="exp-detail">
-                    <li>構建 SSAS Cube 以處理大規模數據集，支援使用者透過多維度角度進行即時分析。</li>
-                    <li>優化數據粒度與計算機制，縮短報表讀取時間。</li>
+                    <li><strong>SQL & ETL：</strong>使用 T-SQL 清洗異質來源數據，建立星狀架構 (Star Schema) 數據模型。</li>
+                    <li><strong>SSAS 建模：</strong>構建多維度 Cube，定義關鍵 KPI 指標（如 YoY, MoM）以支援即時分析。</li>
+                    <li><strong>Power BI：</strong>設計互動式儀表板，提供使用者深入鑽取 (Drill-down) 數據細節之功能。</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>工作經歷 / 專案實績</h2>
+            <h2>核心專業能力</h2>
+            <div class="experience-item">
+                <div class="exp-header"><span class="exp-role">資料庫開發與優化</span></div>
+                <ul class="exp-detail">
+                    <li>精通 T-SQL 編寫、Stored Procedures 開發，具備索引優化與效能調校經驗。</li>
+                    <li>能處理跨資料庫表單關聯與異常數據比對，確保數據一致性。</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header"><span class="exp-role">高階 DAX 與 SSAS</span></div>
+                <ul class="exp-detail">
+                    <li>熟練使用 DAX 處理非標準時間維度計算與複雜彙總邏輯。</li>
+                    <li>具備維護與開發 SSAS Cube 經驗，解決大規模數據集讀取緩慢之痛點。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>工作經歷</h2>
             <div class="experience-item">
                 <div class="exp-header">
-                    <span>XXX 科技有限公司</span>
-                    <span>2022 / 01 - 2024 / 01</span>
+                    <span>(前公司名稱)</span>
+                    <span>202X / XX - 202X / XX</span>
                 </div>
-                <div class="exp-role" style="font-size: 14px; margin-bottom: 5px;">數據分析工程師</div>
+                <div class="exp-role" style="font-size: 14px; margin-bottom: 5px;">生管助理</div>
                 <ul class="exp-detail">
-                    <li>負責全公司銷售數據中台建置，整合 5 個以上異質資料庫系統。</li>
-                    <li>導入 Power BI 自動化報表，減少各部門 40% 的人工數據處理時間。</li>
+                    <li>負責生產排程數據統計與核對，維護廠內資料準確性。</li>
+                    <li>運用 Excel 管理生產報表，並從中發掘數據自動化之優化方向。</li>
                 </ul>
             </div>
         </section>
