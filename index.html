@@ -18,7 +18,7 @@
             font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
             background-color: #f0f2f5;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0; /* 移除 padding 以確保側邊欄貼齊邊緣 */
             color: var(--text-main);
         }
 
@@ -27,8 +27,8 @@
             margin: 0 auto;
             background: var(--main-bg);
             display: flex;
+            position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            min-height: 1100px;
         }
 
         .sidebar {
@@ -36,121 +36,53 @@
             background-color: var(--sidebar-bg);
             color: white;
             padding: 40px 30px;
-        }
-
-        .profile-header h1 {
-            font-size: 28px;
-            margin: 0 0 10px 0;
-            letter-spacing: 2px;
-        }
-
-        .profile-header p {
-            font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 40px;
-        }
-
-        .sidebar-section {
-            margin-bottom: 35px;
-        }
-
-        .sidebar-title {
-            font-size: 16px;
-            text-transform: uppercase;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            color: #bdc3c7;
-        }
-
-        .contact-info p {
-            font-size: 13px;
-            margin: 8px 0;
-            word-break: break-all;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            background: rgba(255,255,255,0.1);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 12px;
+            
+            /* 修改點：完全固定定位 */
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            /* 由於使用了 fixed，需要手動控制寬度與位置 */
+            box-sizing: border-box;
+            z-index: 10;
         }
 
         .main-content {
             flex: 1;
             padding: 50px 40px;
+            /* 修改點：讓出左側空間，確保內容不被側邊欄遮住 */
+            margin-left: 320px; 
+            min-height: 1100px;
         }
 
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 20px;
-            color: var(--accent-blue);
-            border-bottom: 2px solid var(--accent-blue);
-            display: inline-block;
-            margin-bottom: 20px;
-            padding-right: 30px;
-        }
-
-        .objective-text {
-            line-height: 1.8;
-            color: var(--text-light);
-            text-align: justify;
-        }
-
-        .experience-item {
-            margin-bottom: 25px;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .exp-role {
-            color: var(--accent-blue);
-        }
-
-        .exp-detail {
-            font-size: 14px;
-            color: var(--text-light);
-            margin: 0;
-            padding-left: 18px;
-        }
-
-        .exp-detail li {
-            margin-bottom: 5px;
-        }
-
-        .project-badge {
-            display: inline-block;
-            background: #eee;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-
-        .footer-print {
-            margin-top: auto;
-            font-size: 12px;
-            color: #999;
-            text-align: right;
-        }
+        /* 以下為原始樣式，保持不變 */
+        .profile-header h1 { font-size: 28px; margin: 0 0 10px 0; letter-spacing: 2px; }
+        .profile-header p { font-size: 14px; opacity: 0.8; margin-bottom: 40px; }
+        .sidebar-section { margin-bottom: 35px; }
+        .sidebar-title { font-size: 16px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px; margin-bottom: 15px; color: #bdc3c7; }
+        .contact-info p { font-size: 13px; margin: 8px 0; word-break: break-all; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+        section { margin-bottom: 40px; }
+        h2 { font-size: 20px; color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); display: inline-block; margin-bottom: 20px; padding-right: 30px; }
+        .objective-text { line-height: 1.8; color: var(--text-light); text-align: justify; }
+        .experience-item { margin-bottom: 25px; }
+        .exp-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; }
+        .exp-role { color: var(--accent-blue); }
+        .exp-detail { font-size: 14px; color: var(--text-light); margin: 0; padding-left: 18px; }
+        .exp-detail li { margin-bottom: 5px; }
+        .footer-print { margin-top: 50px; font-size: 12px; color: #999; text-align: right; }
 
         @media print {
-            body { background: none; padding: 0; }
-            .resume-wrapper { box-shadow: none; }
+            .sidebar { position: static; height: auto; width: 100%; color: black; background: none; border-bottom: 1px solid #ccc; }
+            .main-content { margin-left: 0; padding: 20px 0; }
+            .resume-wrapper { box-shadow: none; display: block; }
+        }
+
+        /* 響應式：如果螢幕太小（手機），取消固定效果以免遮擋 */
+        @media (max-width: 768px) {
+            .resume-wrapper { display: block; }
+            .sidebar { position: static; width: 100%; height: auto; }
+            .main-content { margin-left: 0; }
         }
     </style>
 </head>
