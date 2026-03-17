@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | 露曦 - 數據分析與 BI 開發專家</title>
+    <title>Resume | 露曦 </title>
     <style>
         :root {
             --sidebar-bg: #2c3e50;
@@ -18,7 +18,7 @@
             font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
             background-color: #f0f2f5;
             margin: 0;
-            padding: 0; /* 移除 padding 以確保側邊欄貼齊邊緣 */
+            padding: 0;
             color: var(--text-main);
         }
 
@@ -36,12 +36,9 @@
             background-color: var(--sidebar-bg);
             color: white;
             padding: 40px 30px;
-            
-            /* 修改點：完全固定定位 */
             position: fixed;
             top: 0;
             bottom: 0;
-            /* 由於使用了 fixed，需要手動控制寬度與位置 */
             box-sizing: border-box;
             z-index: 10;
         }
@@ -49,12 +46,10 @@
         .main-content {
             flex: 1;
             padding: 50px 40px;
-            /* 修改點：讓出左側空間，確保內容不被側邊欄遮住 */
             margin-left: 320px; 
             min-height: 1100px;
         }
 
-        /* 以下為原始樣式，保持不變 */
         .profile-header h1 { font-size: 28px; margin: 0 0 10px 0; letter-spacing: 2px; }
         .profile-header p { font-size: 14px; opacity: 0.8; margin-bottom: 40px; }
         .sidebar-section { margin-bottom: 35px; }
@@ -62,15 +57,18 @@
         .contact-info p { font-size: 13px; margin: 8px 0; word-break: break-all; }
         .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
         .tag { background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 12px; }
-        section { margin-bottom: 40px; }
-        h2 { font-size: 20px; color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); display: inline-block; margin-bottom: 20px; padding-right: 30px; }
-        .objective-text { line-height: 1.8; color: var(--text-light); text-align: justify; }
-        .experience-item { margin-bottom: 25px; }
+        section { margin-bottom: 35px; }
+        h2 { font-size: 20px; color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); display: inline-block; margin-bottom: 15px; padding-right: 30px; }
+        .objective-text { line-height: 1.8; color: var(--text-light); text-align: justify; margin-top: 0; }
+        .experience-item { margin-bottom: 20px; }
         .exp-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; }
-        .exp-role { color: var(--accent-blue); }
-        .exp-detail { font-size: 14px; color: var(--text-light); margin: 0; padding-left: 18px; }
-        .exp-detail li { margin-bottom: 5px; }
-        .footer-print { margin-top: 50px; font-size: 12px; color: #999; text-align: right; }
+        .exp-role { color: var(--accent-blue); font-weight: bold; }
+        .exp-detail { font-size: 14px; color: var(--text-light); margin: 0; padding-left: 18px; line-height: 1.6; }
+        .exp-detail li { margin-bottom: 4px; }
+        .footer-print { margin-top: 40px; font-size: 12px; color: #999; text-align: right; }
+
+        .highlight-box { background: #f8f9fa; border-left: 4px solid #bdc3c7; padding: 15px; margin-top: 10px; }
+        .highlight-title { font-size: 14px; font-weight: bold; margin-bottom: 5px; color: var(--accent-blue); }
 
         @media print {
             .sidebar { position: static; height: auto; width: 100%; color: black; background: none; border-bottom: 1px solid #ccc; }
@@ -78,7 +76,6 @@
             .resume-wrapper { box-shadow: none; display: block; }
         }
 
-        /* 響應式：如果螢幕太小（手機），取消固定效果以免遮擋 */
         @media (max-width: 768px) {
             .resume-wrapper { display: block; }
             .sidebar { position: static; width: 100%; height: auto; }
@@ -92,80 +89,96 @@
     <aside class="sidebar">
         <div class="profile-header">
             <h1>露曦</h1>
-            <p>數據分析工程師 / BI 開發專家</p>
+            <p>數據分析 / BI 開發人員</p>
         </div>
 
         <div class="sidebar-section">
             <div class="sidebar-title">聯絡資訊</div>
             <div class="contact-info">
                 <p>📍 台灣，台中市 </p>
-                <p>📧 cclucy131@example.com</p>
+                <p>📧 cclucy131@gmail.com</p>
                 <p>📞 0905-000-000</p>
                 <p>🔗 Portfolio / GitHub</p>
             </div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">核心技術</div>
+            <div class="sidebar-title">核心技能</div>
             <div class="skill-tags">
-                <span class="tag">SQL Server (T-SQL)</span>
-                <span class="tag">Power BI 視覺化</span>
-                <span class="tag">DAX 運算邏輯</span>
-                <span class="tag">SSAS / Cube</span>
-                <span class="tag">ETL 流程開發</span>
-                <span class="tag">Data Modeling</span>
+                <span class="tag">T-SQL 數據查詢</span>
+                <span class="tag">Power BI 報表製作</span>
+                <span class="tag">DAX 函數應用</span>
+                <span class="tag">SSAS 建模基礎</span>
+                <span class="tag">數據清洗 (ETL)</span>
                 <span class="tag">Excel VBA</span>
             </div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">語言能力</div>
-            <div class="contact-info">
-                <p>中文 - 母語</p>
-                <p>英文 - 普通 (TOEIC 550)</p>
+            <div class="sidebar-title">自主學習</div>
+            <div class="contact-info" style="font-size: 13px; line-height: 1.6;">
+                <p>● SQL Server 實務開發訓練</p>
+                <p>● Power BI 商業數據分析證書</p>
+                <p>● 數據建模與 Star Schema 設計</p>
             </div>
         </div>
     </aside>
 
     <main class="main-content">
         <section>
-            <h2>轉職目標與自學實績</h2>
+            <h2>關於我</h2>
             <p class="objective-text">
-                具備紮實的 <strong>SQL Server</strong> 與 <strong>Power BI</strong> 開發能力，專注於從數據底層建模到終端報表呈現的完整流程。
-                <br>
-                曾於生管實務中觀察到數據自動化的需求，後續投入 BI 技術深造，目前已能熟練運用 <strong>T-SQL</strong> 處理複雜數據清洗，並透過 <strong>SSAS Cube</strong> 建立高效能的多維度分析模型。我是一位具備商業邏輯且能獨立解決技術難題的跨領域學習者。
+                從生管實務出發的數據實作者。曾於聚陽實業擔任生管助理，深刻體會到生產排程中數據手動作業的低效與風險，因而轉向開發技術領域。具備從底層 **SQL 數據清洗**、**多維度模型建立** 到 **Power BI 視覺化呈現** 的一條龍實作經驗。
             </p>
         </section>
 
         <section>
-            <h2>數據開發個人專案</h2>
+            <h2>核心專業與應用能力</h2>
             <div class="experience-item">
-                <div class="exp-header">
-                    <span class="exp-role">商業智慧 (BI) 整合分析專案</span>
-                </div>
+                <div class="exp-role">資料庫開發與 T-SQL 應用</div>
                 <ul class="exp-detail">
-                    <li><strong>SQL & ETL：</strong>使用 T-SQL 清洗異質來源數據，建立星狀架構 (Star Schema) 數據模型。</li>
-                    <li><strong>SSAS 建模：</strong>構建多維度 Cube，定義關鍵 KPI 指標（如 YoY, MoM）以支援即時分析。</li>
-                    <li><strong>Power BI：</strong>設計互動式儀表板，提供使用者深入鑽取 (Drill-down) 數據細節之功能。</li>
+                    <li>熟悉 **T-SQL** 查詢與數據過濾，能編寫預存程序 (Stored Procedures) 簡化例行性數據作業。</li>
+                    <li>具備基本資料表設計思維，能處理資料一致性比對，優化數據提取之邏輯。</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-role">商業智慧建模 (BI Modeling)</div>
+                <ul class="exp-detail">
+                    <li>運用 **SSAS** 建立多維度模型，設計彙總與 KPI 衡量指標。</li>
+                    <li>能使用 **DAX** 撰寫動態時間維度分析（如 YoY, MoM），提供更具價值的商務洞察。</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>核心專業能力</h2>
+            <h2>專案實作紀錄</h2>
             <div class="experience-item">
-                <div class="exp-header"><span class="exp-role">資料庫開發與優化</span></div>
+                <div class="exp-header">
+                    <span class="exp-role">跨系統數據整合分析專案</span>
+                </div>
                 <ul class="exp-detail">
-                    <li>精通 T-SQL 編寫、Stored Procedures 開發，具備索引優化與效能調校經驗。</li>
-                    <li>能處理跨資料庫表單關聯與異常數據比對，確保數據一致性。</li>
+                    <li>**需求分析：** 模擬企業產銷數據，釐清各部門對數據指標的定義差異。</li>
+                    <li>**實作過程：** 將原始 Excel 數據載入 SQL Server，透過 ETL 流程建立 **Star Schema** 架構。</li>
+                    <li>**價值產出：** 製作自動化儀表板，支援一鍵更新數據，節省過去人工彙整報表約 70% 的時間。</li>
                 </ul>
             </div>
 
+            <div class="highlight-box">
+                <div class="highlight-title">💡 解決問題實例：</div>
+                <div style="font-size: 13px; color: var(--text-light); line-height: 1.5;">
+                    在專案過程中曾遇到數據顆粒度不一致問題（日數據與月數據混合），我透過建立**日期維度表**與 **DAX 篩選器上下文 (Filter Context)** 成功克服，確保了彙整數據的正確性。
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>開發工作流 (Workflow)</h2>
             <div class="experience-item">
-                <div class="exp-header"><span class="exp-role">高階 DAX 與 SSAS</span></div>
                 <ul class="exp-detail">
-                    <li>熟練使用 DAX 處理非標準時間維度計算與複雜彙總邏輯。</li>
-                    <li>具備維護與開發 SSAS Cube 經驗，解決大規模數據集讀取緩慢之痛點。</li>
+                    <li><strong>理解業務：</strong> 先釐清 User 真正想解決的「痛點」而非直接寫 Code。</li>
+                    <li><strong>結構設計：</strong> 優先考慮數據模型的擴充性，避免寫死 (Hard-code) 邏輯。</li>
+                    <li><strong>檢驗與部署：</strong> 重視數據核對 (Unit Testing)，確保 BI 報表與原始系統數據一致。</li>
                 </ul>
             </div>
         </section>
@@ -177,16 +190,15 @@
                     <span>聚陽實業股份有限公司</span>
                     <span>2024 / 02 - 2024 / 06</span>
                 </div>
-                <div class="exp-role" style="font-size: 14px; margin-bottom: 5px;">生管助理</div>
+                <div class="exp-role" style="font-size: 13px; font-weight: normal;">生管助理</div>
                 <ul class="exp-detail">
-                    <li>負責生產排程數據統計與核對，維護廠內資料準確性。</li>
-                    <li>運用 Excel 管理生產報表，並從中發掘數據自動化之優化方向。</li>
+                    <li>維護生產排程準確度，並主動利用 Excel 工具提升報表核對效率。</li>
                 </ul>
             </div>
         </section>
 
         <div class="footer-print">
-            © 2026 個人履歷 - Data-Driven BI Expert
+            © 2026 個人履歷 - Data-Driven BI Developer
         </div>
     </main>
 </div>
