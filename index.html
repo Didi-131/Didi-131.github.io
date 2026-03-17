@@ -9,6 +9,7 @@
             --sidebar-bg: #2c3e50;
             --main-bg: #ffffff;
             --accent-blue: #34495e;
+            --link-blue: #3498db; /* 作品集強調色 */
             --text-main: #333;
             --text-light: #666;
             --skill-tag: #ebf2f7;
@@ -50,6 +51,17 @@
             min-height: 1100px;
         }
 
+        /* 側邊欄連結樣式 */
+        .contact-info a {
+            color: var(--link-blue);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
         .profile-header h1 { font-size: 28px; margin: 0 0 10px 0; letter-spacing: 2px; }
         .profile-header p { font-size: 14px; opacity: 0.8; margin-bottom: 40px; }
         .sidebar-section { margin-bottom: 35px; }
@@ -57,6 +69,7 @@
         .contact-info p { font-size: 13px; margin: 8px 0; word-break: break-all; }
         .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
         .tag { background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+        
         section { margin-bottom: 35px; }
         h2 { font-size: 20px; color: var(--accent-blue); border-bottom: 2px solid var(--accent-blue); display: inline-block; margin-bottom: 15px; padding-right: 30px; }
         .objective-text { line-height: 1.8; color: var(--text-light); text-align: justify; margin-top: 0; }
@@ -65,15 +78,33 @@
         .exp-role { color: var(--accent-blue); font-weight: bold; }
         .exp-detail { font-size: 14px; color: var(--text-light); margin: 0; padding-left: 18px; line-height: 1.6; }
         .exp-detail li { margin-bottom: 4px; }
-        .footer-print { margin-top: 40px; font-size: 12px; color: #999; text-align: right; }
+        
+        /* 專案連結按鈕樣式 */
+        .btn-portfolio {
+            display: inline-block;
+            margin-top: 12px;
+            margin-left: 18px;
+            padding: 6px 15px;
+            background-color: var(--accent-blue);
+            color: white !important;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .btn-portfolio:hover {
+            background-color: #1a252f;
+        }
 
         .highlight-box { background: #f8f9fa; border-left: 4px solid #bdc3c7; padding: 15px; margin-top: 10px; }
         .highlight-title { font-size: 14px; font-weight: bold; margin-bottom: 5px; color: var(--accent-blue); }
+        .footer-print { margin-top: 40px; font-size: 12px; color: #999; text-align: right; }
 
         @media print {
             .sidebar { position: static; height: auto; width: 100%; color: black; background: none; border-bottom: 1px solid #ccc; }
             .main-content { margin-left: 0; padding: 20px 0; }
             .resume-wrapper { box-shadow: none; display: block; }
+            .btn-portfolio { border: 1px solid #333; color: black !important; }
         }
 
         @media (max-width: 768px) {
@@ -96,9 +127,10 @@
             <div class="sidebar-title">聯絡資訊</div>
             <div class="contact-info">
                 <p>📍 台灣，台中市 </p>
-                <p>📧 cclucy131@gmail.com</p>
+                <p>📧 <a href="mailto:cclucy131@gmail.com">cclucy131@gmail.com</a></p>
                 <p>📞 0905-000-000</p>
-                <p>🔗 Portfolio / GitHub</p>
+                <p>🔗 <a href="你的作品集網址" target="_blank">個人作品集 Portfolio</a></p>
+                <p>💻 <a href="你的Github網址" target="_blank">GitHub 原始碼</a></p>
             </div>
         </div>
 
@@ -158,10 +190,11 @@
                     <span class="exp-role">跨系統數據整合分析專案</span>
                 </div>
                 <ul class="exp-detail">
-                    <li>**需求分析：** 模擬企業產銷數據，釐清各部門對數據指標的定義差異。</li>
-                    <li>**實作過程：** 將原始 Excel 數據載入 SQL Server，透過 ETL 流程建立 **Star Schema** 架構。</li>
-                    <li>**價值產出：** 製作自動化儀表板，支援一鍵更新數據，節省過去人工彙整報表約 70% 的時間。</li>
+                    <li><strong>需求分析：</strong> 模擬企業產銷數據，釐清各部門對數據指標的定義差異。</li>
+                    <li><strong>實作過程：</strong> 將原始 Excel 數據載入 SQL Server，透過 ETL 流程建立 **Star Schema** 架構。</li>
+                    <li><strong>價值產出：</strong> 製作自動化儀表板，支援一鍵更新數據，節省過去人工彙整報表約 70% 的時間。</li>
                 </ul>
+                <a href="你的具體專案連結" target="_blank" class="btn-portfolio">🔗 查看 Power BI 互動報表與文件</a>
             </div>
 
             <div class="highlight-box">
